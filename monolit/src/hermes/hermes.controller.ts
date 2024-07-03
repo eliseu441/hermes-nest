@@ -15,7 +15,7 @@ import { CreateHermesDto } from './dto/create-hermes.dto';
 import { UpdateHermesDto } from './dto/update-hermes.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
-@Controller('hermes')
+@Controller('api')
 export class HermesController {
   constructor(private readonly hermesService: HermesService) {}
 
@@ -47,5 +47,23 @@ export class HermesController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.hermesService.removeHermes(+id);
+  }
+
+  ///////
+ // @UseGuards(JwtAuthGuard)
+  @Get('/getBioArtists/:page')
+  getArtists(@Param('page') page: string) {
+    let pageNumber = 0
+    if (page) {
+        pageNumber = parseInt(page) * 3
+    }
+    return this.hermesService.getBioArtists(+pageNumber);
+  }
+
+  // @UseGuards(JwtAuthGuard)
+  @Get('/getAllArts/:id')
+  getAllArts(@Param('id') id: string) {
+    let id_artitst = id ? parseInt(id) : 1
+    return this.hermesService.getAllArts(+id_artitst);
   }
 }
