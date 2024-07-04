@@ -18,6 +18,14 @@ passport.deserializeUser(function(user, done) {
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.enableCors({
+    origin: 'http://localhost:3000', // Substitua pela URL de origem permitida
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+    credentials: false,
+  });
+
   app.use( 
     session({ 
       secret: 'demo-session-secret', 
@@ -29,6 +37,6 @@ async function bootstrap() {
   app.use(passport.session()); 
 
 
-  await app.listen(3000);
+  await app.listen(5000);
 }
 bootstrap();
