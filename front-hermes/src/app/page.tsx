@@ -9,8 +9,8 @@ import "slick-carousel/slick/slick-theme.css";
 import './Main.css';
 import moldura from './img/moldura_final-removebg-preview.png';
 import pergaminho from './img/pergaminho.png';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import Link from 'next/link';
 
 interface Settings {
     dots: boolean;
@@ -20,11 +20,12 @@ interface Settings {
     slidesToScroll: number;
 }
 
-const Main: React.FC = () => {
+const Main = () => {
     const [expandIntro, setExpandIntro] = useState<boolean>(true);
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
+        
             // Supondo que createBrowserHistory seja uma função que você precisa chamar
             const history = createBrowserHistory();
             // Agora voc pode usar o objeto history aqui
@@ -55,7 +56,7 @@ const Main: React.FC = () => {
     };
 
     return (
-        <Router>
+        <>
 
             <div className="page-home" data-aos="zoom-in" >
                 <div className="button-right" onClick={e => nextImage(1)}></div>
@@ -76,27 +77,27 @@ const Main: React.FC = () => {
                         <div className="slider-container">
                             <Slider {...settings}>
 
-                                <Link to="/" >
+                                <Link href="/paintings" >
                                     <div className='imgSlider slide1 '>
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>PAINTINGS</h1>
                                     </div>
                                 </Link>
-                                <Link to="/" >
+                                <Link href="/paintings" >
                                     <div className='imgSlider slide2 '>
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>BUILDINGS</h1>
                                     </div>
                                 </Link>
-                                <Link to="/" >
+                                <Link href="/paintings" >
                                     <div className='imgSlider slide3 '>
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>CENTURYS</h1>
                                     </div>
                                 </Link>
-                                <Link to="/" >
+                                <Link href="/paintings" >
                                     <div className='imgSlider slide4 '>
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>SCULPTURES</h1>
                                     </div>
                                 </Link>
-                                <Link to="/" >
+                                <Link href="/paintings" >
                                     <div className='imgSlider slide5 '>
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>ARTISTS</h1>
                                     </div>
@@ -116,7 +117,7 @@ const Main: React.FC = () => {
             </div>
 
 
-        </Router>
+        </>
     );
 };
 
