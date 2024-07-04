@@ -27,6 +27,7 @@
     "@types/react-slick": "^0.23.13",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "sass": "^1.77.6",
     "typescript": "^5"
   }
 }

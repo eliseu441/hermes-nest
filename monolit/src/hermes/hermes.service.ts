@@ -71,6 +71,7 @@ export class HermesService {
       id ? "A.id_artist = :id" : "", { id: id  }
     )
     .limit(7)
+    .orderBy("id_index", "DESC")
     .getRawMany();
     return artists;
   }
