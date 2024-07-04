@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { HermesService } from './hermes.service';
 import { HermesController } from './hermes.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Hermes, Artist, Building, Inventor, RelationArtArtist, RelationImgBuilding  } from './entities/hermes.entity';
+import { Hermes, Artist, SculptureArtist, Building, Inventor, RelationArtArtist, RelationImgBuilding  } from './entities/hermes.entity';
 
 @Module({
   imports: [TypeOrmModule.forFeature([
@@ -11,7 +11,8 @@ import { Hermes, Artist, Building, Inventor, RelationArtArtist, RelationImgBuild
     Building,
     Inventor,
     RelationArtArtist,
-    RelationImgBuilding
+    RelationImgBuilding,
+    SculptureArtist
   ])],
   controllers: [HermesController],
   providers: [HermesService],

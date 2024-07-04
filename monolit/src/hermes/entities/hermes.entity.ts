@@ -35,7 +35,25 @@ export class Artist {
 
 }
 
+@Entity({ name: 'tbf_relation_sculpture_artists' })
+export class SculptureArtist {
 
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column({ name: 'id_artist' })
+    idArtist: number;
+
+    @Column()
+    sculpture: string;
+
+    @Column({ nullable: true })
+    year: number;
+
+    @Column({ name: 'file_name' })
+    fileName: string;
+
+}
 @Entity({ name: 'tbf_buildings' })
 export class Building {
 

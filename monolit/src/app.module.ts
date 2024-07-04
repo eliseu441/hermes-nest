@@ -20,6 +20,7 @@ import { join } from 'path';
       username: 'hermesUsers',
       password: '123',
       database: 'HERMES',
+      logging: true,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: false,
       extra: {
