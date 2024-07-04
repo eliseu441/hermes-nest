@@ -1,4 +1,4 @@
-@media (min-width: 600px) and (min-height:400px) {
+
     @keyframes show-up-img {
         0% {
           opacity: 0;
@@ -37,7 +37,7 @@
         background: none;
         margin-top: -85vh;
         cursor: pointer;
-        animation: 1s ease-out 0s 1 slide-left;
+        animation: 1s ease-out 0s 1 slide-down;
 
 
     }
@@ -52,7 +52,7 @@
         background: none;
 
         margin-top: -100vh;
-        animation: 1s ease-out 0s 1 slide-right;
+        animation: 1s ease-out 0s 1 slide-up;
         cursor: pointer;
 
     }
@@ -77,7 +77,7 @@
         cursor: pointer;
     }
 
-    @keyframes slide-right {
+    @keyframes slide-up {
         0% {
             -webkit-transform: translateY(-50%);
         }
@@ -87,7 +87,7 @@
         }
     }
 
-    @keyframes slide-left {
+    @keyframes slide-down {
         0% {
             -webkit-transform: translateY(40%);
         }
@@ -100,8 +100,6 @@
 
 
     body {
-        display: flex;
-        justify-content: center;
         background-color: #000000;
     }
 
@@ -117,23 +115,7 @@
         zoom: 1;
     }
 
-
-    .back-moldure {
-        width: 61vw;
-        height: 98vh;
-        padding: 0;
-        margin-bottom: -120vh;
-        background-color: #000000;
-        position: relative;
-        z-index: 0;
-
-    }
-
-    .moldura-home {
-        background-color: black;
-        background: none;
-    }
-
+    
     .moldura-h {
         position: absolute;
         width: 55vw;
@@ -149,8 +131,6 @@
         cursor: pointer;
         padding: 30px;
         background: #000;
-        height: 50px;
-        width: 50px;
         border-radius: 50%;
         transition: all 0.2s linear;
     }
@@ -161,7 +141,7 @@
     
     .button-left{
         top:50%;
-        left    : 10%
+        left: 10%
     }
 
     .button-left:hover {
@@ -266,23 +246,79 @@
         background-image: url("./img/2.jpg");
     }
 
-    .aviso {
-        display: none;
+    @media (max-width: 600px) {
+        
+
+        .slider-container {
+            position: absolute;
+            width: 80vw;
+            height: 70vh!important;
+            overflow: visible;
+            z-index: 1 !important;
+            left: 10%!important;
+        }
+        
+
+    .frame-intro:hover .slider-container .imgTitle {
+        height: 70vh!important;
+        opacity: 1;
+        transition: opacity 1s;
+        position: absolute;
+        z-index: 9999999999999;
     }
-}
 
-@media (max-width: 600px) or (max-height:400px) {
-    .page-home {
-        display: none;
-
+    .imgTitle {
+        background-color: rgb(0, 0, 0, 0.5);
+        color: aliceblue;
+        opacity: 0;
+        height: 70vh!important;
+        width: 80vw;
     }
-
-    .aviso {
+    .imgTitle h1{
         display: flex;
         justify-content: center;
-        margin: 20%;
+        align-items: center;
+    }
+
+    .imgSlider {
+        width:80vw!important;
+        height: 70vh!important;
+    }
+    .info-intro {
+        margin-left: -35vw;
+        width: 70vw;
+    }
+    .expandido {
+        margin-left: -35vw;
+        width: 70vw;
+    }
+
+    .hide-intro {
+        font-size: 2.0vh !important;
+        width: 45vw;
+        margin-inline-start: 25vw;
     }
 
 
+    .moldura-h {
+        width: 100vw;
+        left: 0%;
+        height: 70vh!important;
+    }
+    .button-right, .button-left {
+        top:40%!important;
+        padding: 24px;
+        z-index: 2;
+    }
+    .button-right::after,
+    .button-left::after {
+        width: 15px;
+        height: 15px;
+    }
+    .imgSlider {
+        background-position: 40%;
+        height: 60vh!important;
+        overflow: hidden;
+    }
 
-}
+    }

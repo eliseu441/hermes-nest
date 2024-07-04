@@ -4,11 +4,13 @@ import Image from 'next/image';
 import React, { useState, useEffect } from "react";
 //import Preloader from "../../layout/preLoader/PreLoader";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import './Main.css';
 import moldura from './img/moldura_final-removebg-preview.png';
 import pergaminho from './img/pergaminho.png';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 interface Settings {
     dots: boolean;
@@ -23,6 +25,11 @@ const Main: React.FC = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
+            // Supondo que createBrowserHistory seja uma função que você precisa chamar
+            const history = createBrowserHistory();
+            // Agora voc pode usar o objeto history aqui
+        
+
         setTimeout(() => {
             setIsLoading(false);
         }, 3000);
@@ -64,7 +71,7 @@ const Main: React.FC = () => {
 
                 <div className="row frame-intro ">
 
-                    <div className=" moldura-home " >
+                    <div >
                         <div className="redirectarea" onClick={e => redirect()}></div>
                         <div className="slider-container">
                             <Slider {...settings}>
@@ -97,7 +104,7 @@ const Main: React.FC = () => {
                             </Slider>
                         </div>
                         <Image src={moldura} alt="." className="moldura-h" />
-
+                      
 
 
                     </div>
