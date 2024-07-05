@@ -125,9 +125,9 @@ const PaintPage: React.FC<PageProps> = () => {
                             <DropdownList
                                 defaultValue="SANDRO BOTICELLI"
                                 data={comboAuthor ? comboAuthor : ['']}
-                                dataKey='ID'
-                                textField='NAME'
-                                onChange={e => callApis(e.ID)}
+                                dataKey='id'
+                                textField='name'
+                                onChange={e => callApis(e.id)}
                             />
                             : <></>}
                     </div>
