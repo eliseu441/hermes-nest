@@ -16,11 +16,11 @@ passport.deserializeUser(function (user, done) {
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.enableCors({
-        origin: 'https://hermes-vite-eliseu441s-projects.vercel.app/',
+        origin: 'http://localhost:8080/',
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         preflightContinue: false,
         optionsSuccessStatus: 204,
-        credentials: false,
+        credentials: true,
     });
     app.use(session({
         secret: 'demo-session-secret',
