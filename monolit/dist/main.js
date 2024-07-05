@@ -15,13 +15,7 @@ passport.deserializeUser(function (user, done) {
 });
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
-    app.enableCors({
-        origin: 'http://localhost:3000',
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        preflightContinue: false,
-        optionsSuccessStatus: 204,
-        credentials: false,
-    });
+    app.enableCors();
     app.use(session({
         secret: 'demo-session-secret',
         resave: false,
