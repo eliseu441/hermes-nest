@@ -13,6 +13,14 @@
 background: linear-gradient(0deg, rgba(255,55,0,0.8) 50%, rgba(255,166,0,0.8) 100%);
 
 }
+.table-striped thead tr th:last-child {
+    border-top-right-radius: 10px!important;
+    /* Estilos para o último elemento filho da classe .table-repos */
+}
+.table-striped thead tr th:first-child {
+    border-top-left-radius: 10px!important;
+    /* Estilos para o último elemento filho da classe .table-repos */
+}
 .page-link{
     background-color: #4b4b4b!important;
     border-color: rgb(61, 61, 61)!important;
@@ -22,4 +30,6 @@ background: linear-gradient(0deg, rgba(255,55,0,0.8) 50%, rgba(255,166,0,0.8) 10
     background-color: #000000!important;
     color: rgb(255, 94, 0)!important;
  }
- 
+ .custom-table{
+    border-radius: 10px!important;
+ }

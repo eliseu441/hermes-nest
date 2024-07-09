@@ -47,10 +47,10 @@ function DataTable( { onRowClick,dataBuildings }) {
                                 className="mb-3"
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
-                            <Table striped bordered hover className="custom-table">
+                            <Table striped  hover className="custom-table">
                                 <thead>
                                     <tr>
-                                        <th >OPEN</th>
+                                        <th className='d-flex justify-content-center align-items-center'>OPEN</th>
                                         <th>BUILDING</th>
                                         <th>CONTRY</th>
                                         <th>YEAR</th>
