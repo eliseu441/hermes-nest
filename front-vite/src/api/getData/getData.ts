@@ -68,7 +68,40 @@ class pageEdit {
         }
 
     };
-    
+    getSculpCarousel = async (id_author:number) => {
+
+        try {
+            const response = await API.get(`/getSculpCarousel/${id_author}`);
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
+    getSculptorsCombo = async () => {
+
+        try {
+            const response = await API.get(`/getSculptorsCombo`);
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
     
 
 }

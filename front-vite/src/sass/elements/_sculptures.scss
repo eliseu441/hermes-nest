@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+
+@keyframes dd1 {
+    0% {}
+
+    50% {
+        width: 95vw;
+        height: 40vh;
+    }
+}
+
+@keyframes dd12 {
+    0% {}
+
+    50% {
+        background-position: Calc(0vw - 80px) 50%;
+    }
+}
+
+@keyframes dd2 {
+    0% {}
+
+    50% {
+        background-position: Calc(-10vw - 80px) 50%;
+    }
+}
+
+@keyframes dd3 {
+    0% {}
+
+    50% {
+        background-position: Calc(-35vw - 80px) 50%;
+    }
+}
+
+@keyframes dd4 {
+    0% {}
+
+    50% {
+        background-position: Calc(-70vw - 80px) 50%;
+    }
+}
+
+@keyframes dd5 {
+    0% {}
+
+    50% {
+        width: 30vw;
+        height: 100vh;
+    }
+}
+#root{
+    height: 100dvh;
+    position: fixed;
+}
+
+#root,
+main,
+body {
+    background-color: #000000;
+}
+
+.main {
+    background-image: url('/images/sculptures/AntonioCorradini/modesty antonio corradini.png');
+    background-size: contain;
+    background-position: 50vw;
+    opacity: 0.3;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 0;
+    background-color: rgb(0, 0, 0, 1);
+}
+
+.d1 {
+    position: absolute;
+    background-image: url('/images/sculptures/AntonioCorradini/modesty antonio corradini.png');
+    background-size: 2700px 1500px;
+
+    height: 30vh;
+    width: 15vw;
+
+    background-position: 0 50%;
+
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    animation: dd1 10s infinite, dd12 10s infinite;
+}
+
+.d2 {
+    position: absolute;
+    background-image: url('/images/sculptures/AntonioCorradini/modesty antonio corradini.png');
+    background-size: 2700px 1500px;
+
+    height: 50vh;
+    width: 25vw;
+
+    background-position: -10vw 50%;
+    left: 10vw;
+
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd2 10s 2;
+    animation-delay: 4s;
+}
+
+.d3 {
+    position: absolute;
+    background-image: url('/images/sculptures/AntonioCorradini/modesty antonio corradini.png');
+    background-size: 2700px 1500px;
+    overflow: hidden;
+
+    height: 100vh;
+    width: 40vw;
+    left: 25vw;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    background-position: -35vw 50%;
+
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    animation: dd3 10s 2, dd5 10s infinite;
+}
+
+.d4 {
+    position: absolute;
+    overflow: hidden;
+    background-image: url('/images/sculptures/AntonioCorradini/modesty antonio corradini.png');
+    background-size: 2700px 1500px;
+
+    height: 80vh;
+    width: 25vw;
+    left: 60vw;
+    background-position: -70vw 50%;
+
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    animation: dd4 10s 2, dd5 10s infinite;
+}
+
+@keyframes show-up-img {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.page-sculp {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 4vh;
+    overflow-y:  scroll;   
+    overflow-x: hidden;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wallpaper-sculp {
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/sculptures/AntonioCorradini/modesty antonio corradini.png');
+    background-size: contain;
+    z-index: 0;
+}
+
+.carousel {
+
+    height: 50vh;
+    width: 100vw;
+}
+
+
+.slider-right div {
+    display: none;
+}
+
+.fa-arrow-right {
+    display: none;
+}
+
+
+.slider-left div {
+
+    display: none;
+}
+
+.logo-header-cesar {
+    max-height: 25vh;
+    height: auto;
+    width: auto;
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+}
+
+body {
+    position: relative;
+    z-index: -1;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
+.side-expanded-background {
+    z-index: 1;
+    width: 174vw;
+    height: 23vh;
+    margin-right: -114.5vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    background-image: url("/layout/sculp/header_cesar_black.png");
+    background-size: 200vh;
+
+    background-repeat: no-repeat;
+    background-position-y: 70%;
+    background-position-x: 86vw;
+    position: absolute;
+
+    animation: 1s linear slide-sidebar-content-cesar;
+    z-index: 1;
+    margin-left: -74vw !important;
+}
+
+.header-cesar {
+    background-color: black;
+    border-bottom: 2px solid grey;
+    z-index: 1;
+    width: 174vw;
+    height: 23vh;
+    margin-right: -114.5vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    background-image: url("/layout/sculp/header_cesar_black.png");
+    background-size: 200vh;
+
+    background-repeat: no-repeat;
+    background-position-y: 70%;
+    background-position-x: 86vw;
+    position: absolute;
+
+    animation: 1s linear reverse-sidebar-content-cesar;
+
+}
+
+@keyframes slide-sidebar-content-cesar {
+    0% {
+        right: 40vw;
+        /*76vw*/
+    }
+
+    100% {
+        right: 115vw;
+
+
+    }
+}
+
+@keyframes reverse-sidebar-content-cesar {
+    0% {
+        right: 110vw;
+        /*76vw*/
+    }
+
+    100% {
+        right: 40vw;
+
+
+    }
+}
+
+.side-expanded-background {
+    animation: 1s linear slide-sidebar-content-cesar;
+    z-index: 1;
+    margin-left: -74vw !important;
+}
+
+.culpTitle {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    color: #fff;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700 !important;
+    font-size: 4vh;
+    letter-spacing: 1.1px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(121deg, rgba(255, 255, 255, 1) 0%, rgba(168, 168, 168, 1) 46%, rgba(255, 255, 255, 1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.3);
+
+}
+
+.header-cesar p {
+    width: 75vw;
+    letter-spacing: -0.7px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-style: italic;
+    background: linear-gradient(121deg, rgb(235, 196, 6) 0%, rgba(255, 162, 0, 1) 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: -1px -1px 8px rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    padding: 4vh;
+
+}
+
+//types
+
+
+.loading {
+    animation: 3s show-cube;
+    opacity: 1;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    width: 45vh;
+    height: 45vh;
+    perspective: 1000px;
+    margin-left: 0;
+    margin-top: 15vh;
+
+}
+
+
+.combo-sidebar {
+    width: 15vw;
+    margin-left: 14vw;
+}
+
+.combo-sidebar p {
+    margin: 0;
+
+}
+
+.combo-sidebar .rw-widget-input {
+    color: white;
+    background-color: black !important;
+}
+
+.rw-widget-input {
+    font-weight: 500;
+}
+
+.combo-sidebar .rw-widget-picker {
+    display: grid;
+    overflow: hidden;
+    min-height: 38px;
+    background-color: #fff;
+    border: #ffffff 2px solid;
+    border-radius: 6px;
+    outline: none;
+    width: 100%;
+}
+
+.dropdown-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .dropdown-mobile {
+        display: block;
+        top: 5vh;
+        z-index: 3!important;
+    }
+
+    .combo-sidebar p {
+        color: #adadad;
+        font-family: 'Passion One', sans-serif;
+        font-size: 1.3rem;
+    }
+
+    .header-cesar {
+        display: none;
+    }
+
+    .page-sculp .button-right,
+    .page-sculp .button-left {
+        display: none;
+    }
+    .main {
+        background-position: 125vw;
+        height: 150vh;
+        width: 150vw;
+    }
+    .page-sculp{
+        padding-top: 0vh;
+    }
+}

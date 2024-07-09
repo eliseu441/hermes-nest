@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage/HomePage.tsx'
 import Paintings from './pages/Paintings/Paintings.tsx'
 //import SculpPage from './pages/SculpPage/SculpPage.jsx';
 import BuildingsPage from './pages/buildings/BuildingsPage.tsx'
+import SculpPage from './pages/SculpPage/SculpPage.tsx'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
 
           <Route path="/paintings" element={<Paintings />} />
           <Route path="/buildings" element={<BuildingsPage />} />
+          <Route path="/sculptures" element={<SculpPage />} />
       </Routes>
     </HashRouter>
   )

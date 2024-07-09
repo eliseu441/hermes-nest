@@ -78,16 +78,17 @@ const HomePage = () => {
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>BUILDINGS</h1>
                                     </div>
                                 </Link>
-                                <Link to="/paintings" className='no_decoration'>
-                                    <div className='imgSlider slide3 '>
-                                        <h1 className='imgTitle d-flex justify-content-center align-items-center'>CENTURYS</h1>
-                                    </div>
-                                </Link>
-                                <Link to="/paintings" className='no_decoration'>
+                                <Link to="/sculptures" className='no_decoration'>
                                     <div className='imgSlider slide4 '>
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>SCULPTURES</h1>
                                     </div>
                                 </Link>
+                                <Link to="/sculptures" className='no_decoration'>
+                                    <div className='imgSlider slide3 '>
+                                        <h1 className='imgTitle d-flex justify-content-center align-items-center'>CENTURYS</h1>
+                                    </div>
+                                </Link>
+            
                                 <Link to="/paintings" className='no_decoration'>
                                     <div className='imgSlider slide5 '>
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>ARTISTS</h1>

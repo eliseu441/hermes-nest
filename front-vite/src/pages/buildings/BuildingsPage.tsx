@@ -110,7 +110,7 @@ function SculpPage() {
 
             </div>
 
-            <div className="modal fade " id="modalBuildings" aria-labelledby="modalBuildingLabel" aria-hidden="true">
+            <div className="modal fade " id="modalBuildings"data-bs-backdrop="false" aria-labelledby="modalBuildingLabel" aria-hidden="true">
 
                 <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable .modal-xl ">
 
