@@ -1,0 +1,90 @@
+
+@keyframes scroll {
+    100% {
+      background-position-y: 0%;
+    }
+
+    100% {
+      background-position-y: 400%;
+    }
+  }
+
+  .page-build {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    background: url("/layout/buildings/sistine_chapel.jpg");
+    background-position-x: 54vw;
+    justify-content: center;
+    align-items: center;
+    animation: scroll 100s linear infinite;
+  }
+
+  #modalBuildings .modal-dialog {
+    max-width: 90vw !important;
+    max-height: 70vh !important;
+
+  }
+
+  #modalBuildings .modal-content {
+    height: 100% !important;
+  }
+
+  .information {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    background-size: contain;
+    border: none;
+    width: min-content;
+    font-size: 3.3vh;
+    padding-top: 2px;
+    background: rgb(252, 246, 186);
+    background: linear-gradient(112.1deg, rgb(88, 103, 153) 11.4%, rgb(36, 50, 95) 70.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+  }
+
+
+
+  .modal-content .modal-body.background {
+    background: url("/layout/buildings/black_modal.png");
+    opacity: 1;
+    background-size: 101%;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    animation: 2s show-up-img;
+  }
+  
+
+  .build-information {
+    display: flex;
+    justify-content: center;
+    background: rgb(249, 201, 130);
+    background: linear-gradient(164deg, rgba(249, 201, 130, 0.3) 15%, rgba(250, 156, 23, 0.3) 48%, rgba(249, 201, 130, 0.3) 83%);
+    padding: 5px;
+    margin: 1vh 8vw 1vh 8vw;
+    border-radius: 10px;
+    height: max-content;
+    letter-spacing: -0.7px;
+    font-family: 'Monsterrat';
+    font-weight: 600;
+    font-size: 4vh;
+    color: black;
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  .display-none {
+    display: none!important;
+  }
+  .img-modal img{
+    animation: 1s show-up-img;
+    width: 100%;
+    margin-top: 1vh;
+  }

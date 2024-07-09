@@ -34,6 +34,23 @@ class pageEdit {
         }
 
     };
+    getBuildTable = async () => {
+
+        try {
+            const response = await API.get(`/getBuildTable`);
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
     
     
 

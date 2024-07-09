@@ -4,7 +4,7 @@ import API from '../../api/getData/getData'
 import { DropdownList } from 'react-widgets';
 import 'react-widgets/styles.css';
 
-import napoleon from './img/sidebar_napoleao.png';
+import napoleon from '/img/sidebar_napoleao.png';
 
 interface PageProps {
     // props aqui caso necessario
@@ -132,92 +132,100 @@ const PaintPage: React.FC<PageProps> = () => {
                             : <></>}
                     </div>
                 </div>
+                <div className="row col-12 d-flex justify-content-center">
+                    <div className='dropdown-mobile col-7'>
+                        <DropdownList
+                            defaultValue="SANDRO BOTICELLI"
+                            data={comboAuthor ? comboAuthor : ['']}
+                            dataKey='id'
+                            textField='name'
+                            onChange={e => callApis(e.id)}
+                        />
+                    </div>
+
+
+                    <div className="book-cover">
+                        <div className="book">
+                            <label htmlFor="page-1" className="book__page page-1 page_format" onClick={e => changePage(1)}>
+                                <div className="page__content">
+                                    <h2 className="page__content-author mt-4">PICTURE BOOK BY:<br></br> {paints.length > 1 ? paints[0].name : 'SANDRO BOTICELLI'}</h2>
+
+                                    <p className="page__content-credits">
+                                        Instructions:
+                                        <span className='mt-4'>2- Click on book sheet to see the next image</span>
+                                        <span className='mt-2'>3- you can filter artists by clicking on napoleon</span>
+                                    </p>
+                                </div>
+                            </label>
 
 
 
 
-                <div className="book-cover">
-                    <div className="book">
-                        <label htmlFor="page-1" className="book__page page-1 page_format" onClick={e => changePage(1)}>
-                            <div className="page__content">
-                                <h2 className="page__content-author mt-4">PICTURE BOOK BY:<br></br> {paints.length > 1 ? paints[0].name : 'SANDRO BOTICELLI'}</h2>
 
+                            {paints[1] ? <label className={page > 1 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[1] }} >
+                                <div className={page < 2 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
+                                    <div>
+                                        <img src={paints.length > 2 ? `/images/paintings/${paints[0].file_name}` : ''} width='100' className='book-img' />
+                                        <p className="book-author">{paints.length > 2 ? `${paints[0].paint_name}` : ''}</p>
+                                    </div>
+                                </div>
+                                <div className="book__page-back2 page_format">
+                                    <div>
+                                        <img src={paints.length > 2 ? `/images/paintings/${paints[1].file_name}` : ''} width='100' className='book-img col-12' />
+                                        <p className="book-author">{paints.length > 2 ? `${paints[1].paint_name}` : ''}</p>
+                                    </div>
+
+                                </div>
+                            </label> : <></>}
+                            <label className={page > 2 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[2] }} >
+                                <div className={page < 3 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
+                                    <div>
+                                        <img src={paints.length > 2 ? `/images/paintings/${paints[2].file_name}` : ''} width='100' className='book-img col-12' />
+                                        <p className="book-author">{paints.length > 2 ? `${paints[2].paint_name}` : ''}</p>
+                                    </div>
+                                </div>
+                                <div className="book__page-back2 page_format">
+                                    <div>
+                                        <img src={paints.length > 2 ? `/images/paintings/${paints[3].file_name}` : ''} width='100' className='book-img col-12' />
+                                        <p className="book-author">{paints.length > 2 ? `${paints[3].paint_name}` : ''}</p>
+                                    </div>
+
+                                </div>
+                            </label>: <></>
+                            {paints[5] ? <label className={page > 3 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[3] }} >
+                                <div className={page < 4 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
+                                    <div>
+                                        <img src={paints.length > 2 ? `/images/paintings/${paints[4].file_name}` : ''} width='100' className='book-img col-12' />
+                                        <p className="book-author">{paints.length > 2 ? `${paints[4].paint_name}` : ''}</p>
+                                    </div>
+                                </div>
+                                <div className="book__page-back2 page_format">
+                                    <div>
+                                        <img src={paints.length > 2 ? `/images/paintings/${paints[5].file_name}` : ''} width='100' className='book-img col-12' />
+                                        <p className="book-author">{paints.length > 2 ? `${paints[5].paint_name}` : ''}</p>
+                                    </div>
+
+                                </div>
+                            </label> : <></>}
+
+
+
+
+
+
+
+
+                            <label htmlFor="page-5" onClick={e => changePage(2)} className="book__page page-3 page_format" style={{ zIndex: -1 }}>
                                 <p className="page__content-credits">
-                                    Instructions:
-                                    <span className='mt-4'>2- Click on book sheet to see the next image</span>
-                                    <span className='mt-2'>3- you can filter artists by clicking on napoleon</span>
+
+                                    <span className='m-3'>At the moment these are all the paintings we have relating to this artist.</span>
                                 </p>
-                            </div>
-                        </label>
+                            </label>
 
 
 
 
-
-                        {paints[1] ? <label className={page > 1 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[1] }} >
-                            <div className={page < 2 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
-                                <div>
-                                    <img src={paints.length > 2 ? `/images/paintings/${paints[0].file_name}` : ''} width='100' className='book-img' />
-                                    <p className="book-author">{paints.length > 2 ? `${paints[0].paint_name}` : ''}</p>
-                                </div>
-                            </div>
-                            <div className="book__page-back2 page_format">
-                                <div>
-                                    <img src={paints.length > 2 ? `/images/paintings/${paints[1].file_name}` : ''} width='100' className='book-img col-12' />
-                                    <p className="book-author">{paints.length > 2 ? `${paints[1].paint_name}` : ''}</p>
-                                </div>
-
-                            </div>
-                        </label> : <></>}
-                        <label className={page > 2 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[2] }} >
-                            <div className={page < 3 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
-                                <div>
-                                    <img src={paints.length > 2 ? `/images/paintings/${paints[2].file_name}` : ''} width='100' className='book-img' />
-                                    <p className="book-author">{paints.length > 2 ? `${paints[2].paint_name}` : ''}</p>
-                                </div>
-                            </div>
-                            <div className="book__page-back2 page_format">
-                                <div>
-                                    <img src={paints.length > 2 ? `/images/paintings/${paints[3].file_name}` : ''} width='100' className='book-img col-12' />
-                                    <p className="book-author">{paints.length > 2 ? `${paints[3].paint_name}` : ''}</p>
-                                </div>
-
-                            </div>
-                        </label>: <></>
-                        {paints[5] ? <label className={page > 3 ? "book__page page-2 next-page" : "book__page page-2"} style={{ zIndex: indexes[3] }} >
-                            <div className={page < 4 ? "book__page-front2 page_format" : "book__page-front page_format prev-page"}>
-                                <div>
-                                    <img src={paints.length > 2 ? `/images/paintings/${paints[4].file_name}` : ''} width='100' className='book-img' />
-                                    <p className="book-author">{paints.length > 2 ? `${paints[4].paint_name}` : ''}</p>
-                                </div>
-                            </div>
-                            <div className="book__page-back2 page_format">
-                                <div>
-                                    <img src={paints.length > 2 ? `/images/paintings/${paints[5].file_name}` : ''} width='100' className='book-img col-12' />
-                                    <p className="book-author">{paints.length > 2 ? `${paints[5].paint_name}` : ''}</p>
-                                </div>
-
-                            </div>
-                        </label> : <></>}
-
-
-
-
-
-
-
-
-                        <label htmlFor="page-5" onClick={e => changePage(2)} className="book__page page-3 page_format" style={{ zIndex: -1 }}>
-                            <p className="page__content-credits">
-
-                                <span className='m-3'>At the moment these are all the paintings we have relating to this artist.</span>
-                            </p>
-                        </label>
-
-
-
-
-
+                        </div>
 
 
 

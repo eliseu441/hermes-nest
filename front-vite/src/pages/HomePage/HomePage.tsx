@@ -73,7 +73,7 @@ const HomePage = () => {
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>PAINTINGS</h1>
                                     </div>
                                 </Link>
-                                <Link to="/paintings" className='no_decoration'>
+                                <Link to="/buildings" className='no_decoration'>
                                     <div className='imgSlider slide2 '>
                                         <h1 className='imgTitle d-flex justify-content-center align-items-center'>BUILDINGS</h1>
                                     </div>
