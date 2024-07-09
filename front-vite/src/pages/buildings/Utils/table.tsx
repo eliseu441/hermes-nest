@@ -50,7 +50,7 @@ function DataTable( { onRowClick,dataBuildings }) {
                             <Table striped bordered hover className="custom-table">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th >OPEN</th>
                                         <th>BUILDING</th>
                                         <th>CONTRY</th>
                                         <th>YEAR</th>
@@ -60,11 +60,13 @@ function DataTable( { onRowClick,dataBuildings }) {
                                     {currentItems.map((item) => (
                                         <tr key={item.id}>
                                             <td>
-                                            <button className='button-desc side-infos'
+                                            <div 
+                                            className='d-flex justify-content-center align-items-center'
                                             data-bs-toggle="modal" data-bs-target="#modalBuildings"
                                             key={item.id} onClick={() => onRowClick(item.id)}
-                                            />
-                                                </td>
+                                            >
+                                            <i className="bi bi-brightness-high-fill information" ></i>
+                                                </div>                                                </td>
                                             <td>{item.build}</td>
                                             <td>{item.country}</td>
                                             <td>{item.year}</td>

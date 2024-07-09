@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import API from '../../api/getData/getData'
 import 'react-widgets/styles.css';
 import DataTable from "./Utils/table"
+import { promises } from "dns";
 
 interface BuildContentResponse {
     descriptions: { description: string; title: string }[];
@@ -44,12 +45,33 @@ function SculpPage() {
 
 
     const handleRowId = async (rowId: number) => {
-
         console.log('ID :', rowId);
+        openModal(rowId);
 
 
     }
+    const openModal = async (id_build: number): Promise<void>  => {
+        setLoading(2);
+        setDescription('');
+        setTitle('');
+        setImagesModal([]);
+    
+        try {
+            const response = await API.getBuildingDetails( id_build );
+            setDescription(response.descriptions.description);
+            setTitle(response.descriptions.title);
+    
+            const concatImages = response.images.map(el => (
+                <img className='' style={{ borderRadius: "20px" }} src={`/images/buildings/${el.path_name}`} alt='' />
+            ));
 
+            setImagesModal(concatImages);
+        } catch (error) {
+            console.error(error);
+        }
+    
+        setLoading(0);
+    };
 
 
 

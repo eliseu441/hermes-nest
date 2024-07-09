@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 
 @keyframes scroll {
     100% {
@@ -42,8 +43,9 @@
     width: min-content;
     font-size: 3.3vh;
     padding-top: 2px;
-    background: rgb(252, 246, 186);
-    background: linear-gradient(112.1deg, rgb(88, 103, 153) 11.4%, rgb(36, 50, 95) 70.2%);
+    background: rgb(255,55,0);
+background: radial-gradient(circle, rgba(255,55,0,1) 0%, rgba(255,162,0,1) 50%, rgba(254,255,0,1) 100%);
+    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
@@ -73,7 +75,7 @@
     letter-spacing: -0.7px;
     font-family: 'Monsterrat';
     font-weight: 600;
-    font-size: 4vh;
+    font-size: 1.5rem;
     color: black;
     -webkit-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
@@ -88,3 +90,96 @@
     width: 100%;
     margin-top: 1vh;
   }
+  
+
+.swtch-content .checkbox {
+  width: 14.5vw;
+  min-width: 150px;
+  height: 6vh;
+  background-color: #d0d0d0;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.swtch-content #checkbox_toggle {
+  margin-top: 0;
+  display: none;
+}
+
+.swtch-content .checkbox .toggle {
+  width: 6.5vw;
+  min-width: 70px;
+  height: 5.5vh;
+  position: absolute;
+  border-radius: 3vw;
+  left: 0.3vw;
+  cursor: pointer;
+  background: linear-gradient(40deg, #FF0080, #FF8C00 70%);
+
+  transition: 0.4s;
+  box-shadow: 0px 0px 3px rgb(255, 255, 20), 0px 0px 5px rgb(255, 255, 20);
+}
+
+.swtch-content .checkbox .slide {
+  width: 14.5vw;
+  min-width: 150px;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(255, 166, 0);
+
+  cursor: pointer;
+}
+
+.swtch-content .checkbox .slide .text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.swtch-content .check:checked+.checkbox .slide .toggle {
+  transform: translateX(115%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -6vh;
+  background: rgb(25, 23, 20);
+  background: linear-gradient(133deg, rgba(25, 23, 20, 1) 24%, rgba(34, 52, 174, 1) 72%);
+  box-shadow: -0px -0px 10px #8983F7, -0px -0px 3px #8983F7;
+}
+
+.swtch-content .check:checked+.checkbox .slide {
+  background-color: #0a1929;
+  color: #fff;
+}
+
+.modal-title {
+
+  font-family: 'Passion One', sans-serif;
+  font-size: 2.5rem;
+  background: rgb(174, 118, 34);
+  background: linear-gradient(164deg, rgba(174, 118, 34, 1) 15%, rgba(255, 190, 84, 1) 48%, rgba(174, 118, 34, 1) 83%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}  .page-build {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  background: url("/layout/buildings/sistine_chapel.jpg");
+  background-position-x: 54vw;
+  justify-content: center;
+  align-items: center;
+  animation: scroll 100s linear infinite;
+}
+@media (max-width: 600px) {
+
+  .page-build {
+    background-position-x: 0vw;
+    background-size: cover;
+  }
+}

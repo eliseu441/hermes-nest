@@ -2,16 +2,17 @@
 .table-repos{
     min-width: 60vw!important;
     height: max-content;
-    overflow-x: scroll;
-    background-color: rgba(43, 43, 43, 0.7);
+    overflow: visible;
+    background-color: rgba(43, 43, 43, 0.1);
     padding: 10px;
     border-radius: 10px;
 }
 .table-striped thead tr th{
     color: white;
-    background: rgb(65,65,65);
-    background: linear-gradient(0deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 50%, rgba(45,45,45,1) 100%);
- }
+    background: rgb(255,55,0);
+background: linear-gradient(0deg, rgba(255,55,0,0.8) 50%, rgba(255,166,0,0.8) 100%);
+
+}
 .page-link{
     background-color: #4b4b4b!important;
     border-color: rgb(61, 61, 61)!important;

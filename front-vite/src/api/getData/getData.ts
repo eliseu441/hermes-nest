@@ -51,6 +51,23 @@ class pageEdit {
         }
 
     };
+    getBuildingDetails = async (id_build:number) => {
+
+        try {
+            const response = await API.get(`/getBuildingDetails/${id_build}`);
+
+            if (response.status === 200) {
+                const data = response.data;
+                return data;
+            }
+
+            return [];
+
+        } catch (err) {
+            throw err;
+        }
+
+    };
     
     
 
