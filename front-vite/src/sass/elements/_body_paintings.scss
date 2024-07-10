@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #888;
+  }
+    
 .no_decoration {
     text-decoration: none;
 }
@@ -198,7 +209,6 @@
 
 .book__page .page__content-author {
     font-family: "Cormorant Garamond", serif;
-    ;
     font-size: 3vh;
     font-weight: 100;
     text-transform: uppercase;
@@ -518,7 +528,7 @@
     justify-content: center;
     animation: 2.5s show-up-img;
     align-items: baseline;
-    margin-top: -1vh;
+    margin-top: 1vh;
     margin-bottom: 13vh;
     font-family: 'Monsterrat';
     font-size: 3.3vh !important;
@@ -645,11 +655,15 @@ body {
 }
 
 .imgTitle {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
     background-color: rgb(0, 0, 0, 0.5);
     color: aliceblue;
     opacity: 0;
     height: 76vh;
-    padding-bottom: 10vh;
     width: 51vw;
     display: flex;
     justify-content: center;
@@ -719,6 +733,8 @@ body {
     }
 
     .imgTitle {
+    
+
         padding-bottom: 20vh;
         background-color: rgb(0, 0, 0, 0.5);
         color: aliceblue;
@@ -777,6 +793,14 @@ body {
 }
 
 @media (max-width: 600px) {
+
+
+
+.frame-intro .slider-container .imgTitle {
+    padding-top: 60px;
+    opacity: 1;
+    z-index: 3;
+}
     .dropdown-mobile {
         display: block;
         position: absolute;

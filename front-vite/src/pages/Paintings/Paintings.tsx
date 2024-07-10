@@ -112,6 +112,16 @@ const PaintPage: React.FC<PageProps> = () => {
     return (
         <>
 
+
+{loading == true ?
+                <div className='loader-background' >
+                    <div className="loader d-flex justify-content-center">
+                    <p>Loading Images</p>
+                    </div>
+
+                </div>
+                : <></>
+            }
             <div className='paint-page '>
 
                 <img src={napoleon} alt="." width='100' className={sidebar == false ? "logo-sidebar-authors" : "logo-sidebar-authors logo-expanded"} onClick={e => setSidebar(!sidebar)} />

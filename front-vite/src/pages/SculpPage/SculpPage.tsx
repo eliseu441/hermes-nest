@@ -63,20 +63,23 @@ function SculpPage() {
 
     return (
         <>
+            <div className='page-sculptures '>
+        <div className="main">
+            <div className="d1"></div>
+            <div className="d2"></div>
+            <div className="d3"></div>
+            <div className="d4"></div>
+        </div >
             {loading == true ?
+
                 <div className='loader-background' >
+
                     <div className="loader d-flex justify-content-center">
-                        <p>Loading sculptures</p>
+                        <p>{loading ? 'Loading Sculptures' : ''}</p>
                     </div>
 
                 </div>
-                :  <>
-                    <div className="main">
-                        <div className="d1"></div>
-                        <div className="d2"></div>
-                        <div className="d3"></div>
-                        <div className="d4"></div>
-                    </div >
+                : <>
 
 
                     <div className='slide-cesar'>
@@ -136,9 +139,8 @@ function SculpPage() {
 
 
 
-                    </>}
-
-
+                </>}
+                </div>
 
         </>
     )
