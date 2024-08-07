@@ -10,9 +10,7 @@ import { join } from 'path';
 
 @Module({
   imports: [
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'portal'),
-    }),
+   
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'db-projects.cjukum6eu94v.us-east-2.rds.amazonaws.com',
